@@ -7,7 +7,6 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-        
   - type: textarea
     id: description
     attributes:
@@ -16,7 +15,6 @@ body:
       placeholder: Tell us what you see!
     validations:
       required: true
-      
   - type: textarea
     id: reproduction
     attributes:
@@ -28,7 +26,6 @@ body:
         3. See error
     validations:
       required: true
-      
   - type: textarea
     id: expected
     attributes:
@@ -37,7 +34,6 @@ body:
       placeholder: Describe what should happen
     validations:
       required: true
-      
   - type: textarea
     id: actual
     attributes:
@@ -46,7 +42,6 @@ body:
       placeholder: Describe what actually happened
     validations:
       required: true
-      
   - type: textarea
     id: code
     attributes:
@@ -58,7 +53,6 @@ body:
         // Your code here
     validations:
       required: false
-      
   - type: textarea
     id: logs
     attributes:
@@ -68,7 +62,6 @@ body:
       placeholder: Paste error logs here
     validations:
       required: false
-      
   - type: dropdown
     id: environment
     attributes:
@@ -81,7 +74,6 @@ body:
         - Other
     validations:
       required: true
-      
   - type: input
     id: sdk-version
     attributes:
@@ -90,7 +82,6 @@ body:
       placeholder: "1.0.0"
     validations:
       required: true
-      
   - type: input
     id: node-version
     attributes:
@@ -99,7 +90,6 @@ body:
       placeholder: "v20.14.0"
     validations:
       required: false
-      
   - type: dropdown
     id: network
     attributes:
@@ -113,7 +103,6 @@ body:
         - Other
     validations:
       required: true
-      
   - type: textarea
     id: additional
     attributes:
@@ -122,7 +111,6 @@ body:
       placeholder: Add any other context about the problem here
     validations:
       required: false
-      
   - type: checkboxes
     id: checklist
     attributes:
