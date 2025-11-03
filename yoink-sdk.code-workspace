@@ -1,0 +1,31 @@
+{
+    "folders": [
+        {
+            "name": "Yoink SDK",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "git.enabled": true,
+        "git.path": "git",
+        "git.autoRepositoryDetection": true,
+        "files.exclude": {
+            "**/node_modules": true,
+            "**/dist": false,
+            "**/.git": false
+        },
+        "typescript.preferences.includePackageJsonAutoImports": "auto",
+        "npm.packageManager": "npm",
+        "eslint.workingDirectories": ["."],
+        "terminal.integrated.cwd": "."
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.vscode-typescript-next",
+            "ms-vscode.vscode-json",
+            "bradlc.vscode-tailwindcss",
+            "esbenp.prettier-vscode",
+            "ms-vscode.vscode-eslint"
+        ]
+    }
+}
