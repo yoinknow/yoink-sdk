@@ -4,13 +4,13 @@
 
 ✅ **All tests passed successfully!**
 
-The SDK was tested on **November 3, 2025** against a live token on the Eclipse testnet.
+The SDK was tested on **November 3, 2025** against a live token on the Solana testnet.
 
 ## Test Results
 
 ### 1. ✅ Connection Established
 - **RPC URL**: `https://staging-rpc.dev2.eclipsenetwork.xyz`
-- **Network**: Eclipse Testnet
+- **Network**: Solana Testnet
 - Successfully connected to the network
 
 ### 2. ✅ SDK Initialization
@@ -150,6 +150,6 @@ The SDK provides a clean, simple interface for developers to integrate Yoink tra
 ---
 
 **Test Date**: November 3, 2025
-**Test Network**: Eclipse Testnet
+**Test Network**: Solana Testnet
 **SDK Version**: 1.0.0
 **Status**: ✅ PASSED

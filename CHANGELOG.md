@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive documentation and examples
 - Built-in slippage protection (default 5%)
 - Priority fee support for transactions
-- Eclipse/Solana blockchain compatibility
+- Solana blockchain compatibility
 
 ### Features
 - **Bonding Curve Integration**: Full support for Yoink's CPMM-based bonding curves
@@ -34,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Transaction Safety**: Automatic validation and error handling
 - **TypeScript Support**: Full type definitions included
 - **Multiple Environments**: Works in Node.js and browser environments
-- **Explorer Integration**: Compatible with Eclipse block explorer
+- **Explorer Integration**: Compatible with Solana block explorer
 
 ### Documentation
 - Complete API reference in README.md

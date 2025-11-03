@@ -18,7 +18,7 @@ async function testSDK() {
   try {
     // 1. Setup connection
     console.log("1️⃣  Setting up connection...");
-    const rpcUrl = process.env.ECLIPSE_RPC_URL || "https://staging-rpc.dev2.eclipsenetwork.xyz";
+    const rpcUrl = process.env.SOLANA_RPC_URL || "https://staging-rpc.dev2.eclipsenetwork.xyz";
     console.log(`   RPC URL: ${rpcUrl}`);
     
     const connection = new Connection(rpcUrl, { commitment: "confirmed" });

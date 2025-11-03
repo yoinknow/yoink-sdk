@@ -47,7 +47,7 @@ By participating in this project, you agree to maintain a respectful and inclusi
 - npm v11.2.0 or higher
 - Git
 - TypeScript knowledge
-- Solana/Eclipse development experience (helpful)
+- Solana development experience (helpful)
 
 ### Installation
 
@@ -71,7 +71,9 @@ Create a `.env` file in the `yoink-sdk` directory:
 cp .env.example .env
 
 # Edit with your configuration
-# - Set RPC_URL for Eclipse testnet/mainnet
+# - Set RPC_URL for Solana testnet/mainnet
+# - Testnet: https://staging-rpc.dev2.eclipsenetwork.xyz  
+# - Mainnet: https://api.mainnet-beta.solana.com
 # - Set PRIVATE_KEY for testing (testnet only!)
 ```
 

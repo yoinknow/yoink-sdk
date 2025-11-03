@@ -131,7 +131,7 @@ git push origin --tags
 ```markdown
 # Yoink SDK v1.0.0 🚀
 
-Initial release of the Yoink SDK for Eclipse/Solana blockchain.
+Initial release of the Yoink SDK for Solana blockchain.
 
 ## Features
 

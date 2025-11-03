@@ -36,11 +36,11 @@ function getOrCreateKeypair(folder: string, name: string): Keypair {
  * Get Anchor provider
  */
 function getProvider(): AnchorProvider {
-  if (!process.env.ECLIPSE_RPC_URL) {
-    throw new Error("Please set ECLIPSE_RPC_URL in .env file");
+  if (!process.env.SOLANA_RPC_URL) {
+    throw new Error("Please set SOLANA_RPC_URL in .env file");
   }
 
-  const connection = new Connection(process.env.ECLIPSE_RPC_URL);
+  const connection = new Connection(process.env.SOLANA_RPC_URL);
   const wallet = new NodeWallet(new Keypair());
   return new AnchorProvider(connection, wallet, { commitment: "confirmed" });
 }

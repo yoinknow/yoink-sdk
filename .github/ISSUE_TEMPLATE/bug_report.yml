@@ -106,8 +106,8 @@ body:
       label: Network
       description: Which network are you using?
       options:
-        - Eclipse Testnet
-        - Eclipse Mainnet
+        - Solana Testnet
+        - Solana Mainnet
         - Solana Devnet
         - Solana Mainnet
         - Other

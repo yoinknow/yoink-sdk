@@ -20,7 +20,7 @@ A complete example showing:
 
 1. **Node.js** v20.14.0 or higher
 2. **npm** or **yarn**
-3. **Eclipse testnet wallet** with some SOL
+3. **Solana testnet wallet** with some SOL
 
 ### Setup
 
@@ -42,7 +42,13 @@ A complete example showing:
 
 4. Edit `.env` and add your settings:
    ```env
+      ```bash
+   # For testnet (current)
    RPC_URL=https://staging-rpc.dev2.eclipsenetwork.xyz
+   
+   # For Solana mainnet
+   # RPC_URL=https://api.mainnet-beta.solana.com
+   ```
    PRIVATE_KEY=[your,private,key,array]
    PROGRAM_ID=HbiDw6U515iWwHQ4edjmceT24ST7akg7z5rhXRhBac4J
    ```
@@ -146,7 +152,7 @@ const result = await sdk.sell(
 
 | Variable | Description | Required | Example |
 |----------|-------------|----------|---------|
-| `RPC_URL` | Eclipse RPC endpoint | Yes | `https://staging-rpc.dev2.eclipsenetwork.xyz` |
+| `RPC_URL` | Solana RPC endpoint | Yes | `https://staging-rpc.dev2.eclipsenetwork.xyz` (testnet) or `https://api.mainnet-beta.solana.com` (mainnet) |
 | `PRIVATE_KEY` | Wallet private key (JSON array) | Yes | `[1,2,3,...]` |
 | `PROGRAM_ID` | Yoink program ID | No | Auto-configured |
 | `PRIORITY_FEE_LAMPORTS` | Priority fee in lamports | No | `100000` |
@@ -239,7 +245,7 @@ Executing buy transaction...
 - [SDK Documentation](../../README.md)
 - [API Reference](../../README.md#api-reference)
 - [Quick Reference](../../QUICK_REFERENCE.md)
-- [Eclipse Explorer](https://explorer.dev.eclipsenetwork.xyz)
+- [Solana Explorer](https://explorer.dev.eclipsenetwork.xyz)
 
 ## 💡 Tips
 

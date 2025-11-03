@@ -6,9 +6,9 @@
   [![npm version](https://img.shields.io/npm/v/yoink-sdk.svg?style=flat-square)](https://www.npmjs.com/package/yoink-sdk)
   [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg?style=flat-square)](https://opensource.org/licenses/ISC)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-  [![Eclipse](https://img.shields.io/badge/Eclipse-Solana-purple?style=flat-square)](https://www.eclipse.xyz/)
+  [![Solana](https://img.shields.io/badge/Solana-Solana-purple?style=flat-square)](https://solana.com/)
 
-  ### 🚀 Official TypeScript SDK for interacting with the Yoink bonding curve protocol on Eclipse/Solana
+  ### 🚀 Official TypeScript SDK for interacting with the Yoink bonding curve protocol on Solana
   
 </div>
 
@@ -40,8 +40,12 @@ yarn add yoink-sdk
 
 Create a `.env` file with your RPC endpoint:
 
-```env
-ECLIPSE_RPC_URL=https://staging-rpc.dev2.eclipsenetwork.xyz
+```bash
+# For testnet (current configuration)
+SOLANA_RPC_URL=https://staging-rpc.dev2.eclipsenetwork.xyz
+
+# For Solana mainnet
+# SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
 ```
 
 ### Basic Usage
@@ -53,7 +57,7 @@ import { AnchorProvider } from "@coral-xyz/anchor";
 import NodeWallet from "@coral-xyz/anchor/dist/cjs/nodewallet";
 
 // Initialize connection and provider
-const connection = new Connection(process.env.ECLIPSE_RPC_URL!);
+const connection = new Connection(process.env.SOLANA_RPC_URL!);
 const wallet = new NodeWallet(Keypair.generate());
 const provider = new AnchorProvider(connection, wallet, { commitment: "confirmed" });
 
@@ -564,14 +568,14 @@ npm publish
 ```bash
 cd example/basic
 npm install
-# Set up your .env file with ECLIPSE_RPC_URL
+# Set up your .env file with SOLANA_RPC_URL
 npx ts-node index.ts
 ```
 
 ## Program Information
 
 - **Program ID:** `HbiDw6U515iWwHQ4edjmceT24ST7akg7z5rhXRhBac4J`
-- **Network:** Eclipse (Solana-compatible)
+- **Network:** Solana
 - **Framework:** Anchor ^0.30.1
 
 ## Contributing

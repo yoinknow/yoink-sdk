@@ -4,7 +4,7 @@
 
 ✅ **SDK Created**: Full TypeScript SDK with buy, sell, and quote functionality  
 ✅ **Built Successfully**: Compiled to ESM, CJS, and browser bundles  
-✅ **Tested Live**: Verified against Eclipse testnet with actual token  
+✅ **Tested Live**: Verified against Solana testnet with actual token  
 ✅ **Production Ready**: Ready to publish to NPM  
 
 ---
@@ -31,7 +31,7 @@ Located at: `/home/memewhales/smart_livestreams/yoink-sdk/`
 
 ## Test Results ✅
 
-All tests passed successfully on Eclipse testnet:
+All tests passed successfully on Solana testnet:
 
 ```
 ✅ SDK Initialization - Program ID correct
@@ -103,7 +103,7 @@ const result = await sdk.buy(
 | `README.md` | Complete API documentation with examples |
 | `QUICK_REFERENCE.md` | Quick start guide for developers |
 | `PROJECT_SUMMARY.md` | Architecture and design decisions |
-| `TEST_RESULTS.md` | Live test results from Eclipse testnet |
+| `TEST_RESULTS.md` | Live test results from Solana testnet |
 | `test-sdk.js` | Working test script you can run |
 | `example/basic/index.ts` | Complete usage example |
 
@@ -221,7 +221,7 @@ If your smart contract changes:
 
 **What you accomplished:**
 - ✅ Built a production-ready TypeScript SDK
-- ✅ Tested live on Eclipse testnet with real tokens
+- ✅ Tested live on Solana testnet with real tokens
 - ✅ Created comprehensive documentation
 - ✅ Made it ready for NPM publication
 - ✅ Kept it focused (only buy/sell/quote - no token creation)
@@ -243,7 +243,7 @@ If your smart contract changes:
 **Status**: ✅ PRODUCTION READY  
 **Version**: 1.0.0  
 **Last Tested**: November 3, 2025  
-**Test Network**: Eclipse Testnet  
+**Test Network**: Solana Testnet  
 **Location**: `/home/memewhales/smart_livestreams/yoink-sdk/`
 
 🎉 **Congratulations on shipping a complete SDK!**

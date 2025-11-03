@@ -8,7 +8,7 @@ The SDK test scripts now use the same wallet as the smart contract tests, loaded
 ### Source
 - **Original Location**: `~/.config/solana/id_pumpv2_deployer.json`
 - **Public Key**: `715Zjd5g9kmUMBNBLDQWtbwqCptUrnCaebUfqkEK19rT`
-- **Balance**: ~335.9 SOL (on Eclipse testnet)
+- **Balance**: ~335.9 SOL (on Solana testnet)
 - **Role**: Fee recipient wallet for the Yoink protocol
 
 ### Configuration Files
@@ -67,7 +67,11 @@ The `.env` file contains:
 
 ```bash
 # RPC endpoint
+# For testnet (current)
 RPC_URL=https://staging-rpc.dev2.eclipsenetwork.xyz
+
+# For Solana mainnet
+# RPC_URL=https://api.mainnet-beta.solana.com
 
 # Wallet private key (same as smart contract tests)
 PRIVATE_KEY=[126,171,214,136,23,212,94,42,205,146,...]

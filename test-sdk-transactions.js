@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
 
-// Explorer base URL for Eclipse
+// Explorer base URL for Solana
 const EXPLORER_URL = "https://explorer.dev.eclipsenetwork.xyz";
 
 /**
@@ -48,7 +48,7 @@ async function testSDKWithTransactions() {
   try {
     // 1. Setup connection
     console.log("1️⃣  Setting up connection...");
-    const rpcUrl = process.env.RPC_URL || process.env.ECLIPSE_RPC_URL || "https://staging-rpc.dev2.eclipsenetwork.xyz";
+    const rpcUrl = process.env.RPC_URL || process.env.SOLANA_RPC_URL || "https://staging-rpc.dev2.eclipsenetwork.xyz";
     console.log(`   RPC URL: ${rpcUrl}`);
     
     const connection = new Connection(rpcUrl, { commitment: "confirmed" });
@@ -268,7 +268,7 @@ async function testSDKWithTransactions() {
     console.log("🔗 Useful Links:");
     console.log(`   - Test Account: ${getExplorerLink(testAccount.publicKey.toBase58(), "address")}`);
     console.log(`   - Program: ${getExplorerLink(sdk.program.programId.toBase58(), "address")}`);
-    console.log(`   - Eclipse Explorer: ${EXPLORER_URL}`);
+    console.log(`   - Solana Explorer: ${EXPLORER_URL}`);
     console.log();
 
   } catch (error) {

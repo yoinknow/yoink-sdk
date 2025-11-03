@@ -161,7 +161,7 @@ console.log("Signature:", result.signature);
 
 ### Based on FightHorse SDK Reference
 
-The SDK structure follows the `fighthorse-eclipse-sdk` pattern:
+The SDK structure follows the `fighthorse-solana-sdk` pattern:
 - Similar class structure (main SDK class + account classes)
 - Same transaction utilities (sendTx, buildVersionedTx)
 - Consistent API design (buy, sell, quote methods)
@@ -263,7 +263,7 @@ yarn add yoink-sdk
 
 1. **BigInt TypeScript Errors** - Requires ES2020 or higher target
 2. **IDL Import Issues** - Make sure yoink.json is in the correct location
-3. **RPC Connection** - Ensure ECLIPSE_RPC_URL is set correctly
+3. **RPC Connection** - Ensure SOLANA_RPC_URL is set correctly
 
 ### Future Enhancements
 

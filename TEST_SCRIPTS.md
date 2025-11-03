@@ -109,7 +109,7 @@ When funded, you'll see:
 
 ## Explorer Links
 
-All explorer links use Eclipse testnet explorer:
+All explorer links use Solana testnet explorer:
 - **Base URL**: https://explorer.dev.eclipsenetwork.xyz
 - **Address format**: `/address/{publicKey}`
 - **Transaction format**: `/tx/{signature}`
