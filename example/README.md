@@ -1,3 +1,4 @@
+````markdown
 # Yoink SDK Examples
 
 This directory contains working examples demonstrating how to use the Yoink SDK.
@@ -13,6 +14,87 @@ A complete example showing:
 - Executing buy transactions
 - Executing sell transactions
 - Token balance queries
+
+### [Price Checker](./price-checker/)
+
+Comprehensive price analysis and testing examples:
+- Real-time price checking
+- Market analysis and comparison
+- Quote verification against smart contract
+- Buy/sell execution testing
+- Comprehensive quotation system
+
+### [Trading Bot](./trading-bot/) 🤖
+
+Simple automated trading bot demonstrating:
+- Token analysis and scoring system
+- Automated buy/sell execution
+- Risk management with profit targets and stop losses
+- Position monitoring and P&L tracking
+- Demo mode for safe testing
+
+## 🚀 Quick Start Guide
+
+### Prerequisites
+
+1. **Node.js** v20.14.0 or higher
+2. **npm** or **yarn**
+3. **Solana CLI** configured with wallet
+4. **Sufficient SOL balance** for trading and fees
+
+### Setup
+
+1. **Install dependencies** (from SDK root):
+   ```bash
+   npm install
+   npm run build
+   ```
+
+2. **Configure Solana CLI**:
+   ```bash
+   solana config get
+   solana balance
+   ```
+
+3. **Choose your example**:
+   - **Basic**: Simple SDK functionality demo
+   - **Price Checker**: Quote analysis and verification
+   - **Trading Bot**: Automated trading with risk management
+
+## 📊 Example Comparison
+
+| Example | Purpose | Risk Level | Complexity |
+|---------|---------|------------|------------|
+| **Basic** | Learn SDK basics | 🟢 Low | Beginner |
+| **Price Checker** | Analyze markets | 🟡 None | Intermediate |
+| **Trading Bot** | Automated trading | 🔴 High | Advanced |
+
+## 🎯 Recommended Learning Path
+
+### 1. Start with Basic Example
+```bash
+cd example/basic
+node index.js
+```
+
+### 2. Explore Price Analysis
+```bash
+cd example/price-checker
+node quotation-test.js
+```
+
+### 3. Try Trading Bot (Demo Mode)
+```bash
+cd example/trading-bot
+node demo-trading-bot.js
+```
+
+### 4. Advanced: Live Trading Bot
+```bash
+cd example/trading-bot
+# ⚠️ Use small amounts and monitor closely!
+node simple-trading-bot.js
+```
 
 ## 🚀 Running the Examples
 

@@ -71,7 +71,7 @@ export class BondingCurveAccount {
 
   /**
    * Calculate how many tokens you get for a given SOL amount (before fees)
-   * Uses CPMM formula: k = virtualTokenReserves * virtualSolReserves
+   * This should match the contract's buy_quote function exactly
    */
   getBuyPrice(solAmount: bigint): bigint {
     if (this.complete) {
@@ -82,17 +82,14 @@ export class BondingCurveAccount {
       return BigInt(0);
     }
 
-    // k = virtualTokenReserves * virtualSolReserves
-    const k = this.virtualTokenReserves * this.virtualSolReserves;
+    // We need to reverse the contract's buy_quote formula to find token amount
+    // Contract: sol_cost = (token_amount * virtual_sol_reserves) / (virtual_token_reserves - token_amount)
+    // Rearranging: token_amount = (sol_cost * virtual_token_reserves) / (virtual_sol_reserves + sol_cost)
     
-    // After adding SOL, what are the new virtual sol reserves?
-    const newVirtualSolReserves = this.virtualSolReserves + solAmount;
+    const virtualSolReserves = BigInt(this.virtualSolReserves);
+    const virtualTokenReserves = BigInt(this.virtualTokenReserves);
     
-    // k / newVirtualSolReserves = newVirtualTokenReserves
-    const newVirtualTokenReserves = k / newVirtualSolReserves;
-    
-    // tokens bought = oldTokenReserves - newTokenReserves
-    const tokenAmount = this.virtualTokenReserves - newVirtualTokenReserves;
+    const tokenAmount = (solAmount * virtualTokenReserves) / (virtualSolReserves + solAmount);
     
     // Cap at real token reserves
     return tokenAmount < this.realTokenReserves 
@@ -102,7 +99,7 @@ export class BondingCurveAccount {
 
   /**
    * Calculate how much SOL you get for selling a given token amount (before fees)
-   * Uses CPMM formula: solOut = (tokenAmount * virtualSolReserves) / (virtualTokenReserves + tokenAmount)
+   * This matches the contract's sell_quote function exactly
    */
   getSellPrice(tokenAmount: bigint): bigint {
     if (this.complete) {
@@ -113,10 +110,11 @@ export class BondingCurveAccount {
       return BigInt(0);
     }
 
-    // Calculate proportional SOL amount using CPMM
-    const solAmount = 
-      (tokenAmount * this.virtualSolReserves) / 
-      (this.virtualTokenReserves + tokenAmount);
+    // Contract: sol_output = (amount * virtual_sol_reserves) / (virtual_token_reserves + amount)
+    const virtualSolReserves = BigInt(this.virtualSolReserves);
+    const virtualTokenReserves = BigInt(this.virtualTokenReserves);
+    
+    const solAmount = (tokenAmount * virtualSolReserves) / (virtualTokenReserves + tokenAmount);
     
     return solAmount < this.realSolReserves 
       ? solAmount 
@@ -138,15 +136,27 @@ export class BondingCurveAccount {
   }
 
   /**
-   * Get price per token in SOL
+   * Get price per token in SOL (for 1 actual token, accounting for decimals)
    */
   getPricePerToken(): number {
     if (this.virtualTokenReserves === BigInt(0)) {
       return 0;
     }
     
-    const price = Number(this.virtualSolReserves) / Number(this.virtualTokenReserves);
-    return price;
+    // Price for 1 token with 6 decimals (1,000,000 base units)
+    const oneTokenWithDecimals = BigInt(Math.pow(10, 6)); // 1,000,000 for 6 decimals
+    
+    // Calculate how much SOL it would cost to buy 1 actual token
+    // Using contract formula: sol_cost = (token_amount * virtual_sol_reserves) / (virtual_token_reserves - token_amount)
+    const virtualSolReserves = BigInt(this.virtualSolReserves);
+    const virtualTokenReserves = BigInt(this.virtualTokenReserves);
+    
+    const solCostForOneToken = (oneTokenWithDecimals * virtualSolReserves) / (virtualTokenReserves - oneTokenWithDecimals);
+    
+    // Convert from lamports to SOL
+    const priceInSOL = Number(solCostForOneToken) / 1_000_000_000; // LAMPORTS_PER_SOL
+    
+    return priceInSOL;
   }
 
   public static fromBuffer(buffer: Buffer): BondingCurveAccount {
