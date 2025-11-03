@@ -33,6 +33,15 @@ Simple automated trading bot demonstrating:
 - Position monitoring and P&L tracking
 - Demo mode for safe testing
 
+### [TypeScript Demo](./typescript-demo/) 🔷
+
+TypeScript compatibility and usage examples:
+- Full TypeScript type safety and IntelliSense
+- Complete type definitions and interfaces
+- BigInt support for precise calculations
+- Multiple import methods (ESM, CJS, Browser)
+- Development tools and configuration
+
 ## 🚀 Quick Start Guide
 
 ### Prerequisites
@@ -63,11 +72,12 @@ Simple automated trading bot demonstrating:
 
 ## 📊 Example Comparison
 
-| Example | Purpose | Risk Level | Complexity |
-|---------|---------|------------|------------|
-| **Basic** | Learn SDK basics | 🟢 Low | Beginner |
-| **Price Checker** | Analyze markets | 🟡 None | Intermediate |
-| **Trading Bot** | Automated trading | 🔴 High | Advanced |
+| Example | Purpose | Risk Level | Complexity | Language |
+|---------|---------|------------|------------|----------|
+| **Basic** | Learn SDK basics | 🟢 Low | Beginner | JavaScript |
+| **Price Checker** | Analyze markets | 🟡 None | Intermediate | JavaScript |
+| **Trading Bot** | Automated trading | 🔴 High | Advanced | JavaScript |
+| **TypeScript Demo** | TS integration | 🟢 None | Beginner | TypeScript |
 
 ## 🎯 Recommended Learning Path
 
@@ -89,7 +99,13 @@ cd example/trading-bot
 node demo-trading-bot.js
 ```
 
-### 4. Advanced: Live Trading Bot
+### 4. TypeScript Integration (Optional)
+```bash
+cd example/typescript-demo
+node simple-typescript-demo.js
+```
+
+### 5. Advanced: Live Trading Bot
 ```bash
 cd example/trading-bot
 # ⚠️ Use small amounts and monitor closely!

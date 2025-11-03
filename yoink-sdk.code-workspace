@@ -16,7 +16,9 @@
         },
         "typescript.preferences.includePackageJsonAutoImports": "auto",
         "npm.packageManager": "npm",
-        "eslint.workingDirectories": ["."],
+        "eslint.workingDirectories": [
+            "."
+        ],
         "terminal.integrated.cwd": "."
     },
     "extensions": {

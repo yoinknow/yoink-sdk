@@ -1,0 +1,22 @@
+{
+    "name": "yoink-sdk-typescript-demo",
+    "version": "1.0.0",
+    "description": "TypeScript compatibility demo for Yoink SDK",
+    "main": "typescript-demo.ts",
+    "scripts": {
+        "demo": "ts-node typescript-demo.ts",
+        "build": "tsc typescript-demo.ts --outDir ./dist --target ES2020 --module commonjs --esModuleInterop",
+        "run": "node dist/typescript-demo.js"
+    },
+    "devDependencies": {
+        "@types/node": "^20.14.1",
+        "typescript": "^5.5.2",
+        "ts-node": "^10.9.2"
+    },
+    "dependencies": {
+        "@coral-xyz/anchor": "^0.30.1",
+        "@solana/web3.js": "^1.92.1",
+        "@solana/spl-token": "0.4.6",
+        "yaml": "^2.0.0"
+    }
+}

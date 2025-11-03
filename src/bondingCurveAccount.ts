@@ -85,15 +85,15 @@ export class BondingCurveAccount {
     // We need to reverse the contract's buy_quote formula to find token amount
     // Contract: sol_cost = (token_amount * virtual_sol_reserves) / (virtual_token_reserves - token_amount)
     // Rearranging: token_amount = (sol_cost * virtual_token_reserves) / (virtual_sol_reserves + sol_cost)
-    
+
     const virtualSolReserves = BigInt(this.virtualSolReserves);
     const virtualTokenReserves = BigInt(this.virtualTokenReserves);
-    
+
     const tokenAmount = (solAmount * virtualTokenReserves) / (virtualSolReserves + solAmount);
-    
+
     // Cap at real token reserves
-    return tokenAmount < this.realTokenReserves 
-      ? tokenAmount 
+    return tokenAmount < this.realTokenReserves
+      ? tokenAmount
       : this.realTokenReserves;
   }
 
@@ -113,11 +113,11 @@ export class BondingCurveAccount {
     // Contract: sol_output = (amount * virtual_sol_reserves) / (virtual_token_reserves + amount)
     const virtualSolReserves = BigInt(this.virtualSolReserves);
     const virtualTokenReserves = BigInt(this.virtualTokenReserves);
-    
+
     const solAmount = (tokenAmount * virtualSolReserves) / (virtualTokenReserves + tokenAmount);
-    
-    return solAmount < this.realSolReserves 
-      ? solAmount 
+
+    return solAmount < this.realSolReserves
+      ? solAmount
       : this.realSolReserves;
   }
 
@@ -142,20 +142,20 @@ export class BondingCurveAccount {
     if (this.virtualTokenReserves === BigInt(0)) {
       return 0;
     }
-    
+
     // Price for 1 token with 6 decimals (1,000,000 base units)
     const oneTokenWithDecimals = BigInt(Math.pow(10, 6)); // 1,000,000 for 6 decimals
-    
+
     // Calculate how much SOL it would cost to buy 1 actual token
     // Using contract formula: sol_cost = (token_amount * virtual_sol_reserves) / (virtual_token_reserves - token_amount)
     const virtualSolReserves = BigInt(this.virtualSolReserves);
     const virtualTokenReserves = BigInt(this.virtualTokenReserves);
-    
+
     const solCostForOneToken = (oneTokenWithDecimals * virtualSolReserves) / (virtualTokenReserves - oneTokenWithDecimals);
-    
+
     // Convert from lamports to SOL
     const priceInSOL = Number(solCostForOneToken) / 1_000_000_000; // LAMPORTS_PER_SOL
-    
+
     return priceInSOL;
   }
 
@@ -177,7 +177,7 @@ export class BondingCurveAccount {
     ]);
 
     let value = structure.decode(buffer);
-    
+
     return new BondingCurveAccount(
       BigInt(value.discriminator),
       BigInt(value.virtualTokenReserves),
