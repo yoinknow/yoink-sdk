@@ -1,0 +1,55 @@
+# Development files
+node_modules
+src
+example
+.keys
+.env
+.env.*
+!.env.example
+!assets
+
+# Configuration files
+tsconfig.json
+tsconfig.cjs.json
+tsconfig-node.json
+tsconfig.test.json
+rollup.config.js
+
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Test files
+test-sdk.js
+test-sdk-transactions.js
+test-sdk.ts
+*.test.ts
+*.test.js
+*.spec.ts
+*.spec.js
+
+# Documentation (keep README and LICENSE)
+COMPLETE.md
+WALLET_SETUP.md
+TEST_RESULTS.md
+TEST_SCRIPTS.md
+PROJECT_SUMMARY.md
+
+# Build artifacts (temp)
+*.log
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# CI/CD
+.github

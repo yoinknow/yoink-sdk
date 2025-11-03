@@ -1,0 +1,137 @@
+name: Bug Report
+description: Report a bug or issue with the Yoink SDK
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Initialize SDK with '...'
+        2. Call method '...'
+        3. See error
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen
+      placeholder: Describe what should happen
+    validations:
+      required: true
+      
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened
+      placeholder: Describe what actually happened
+    validations:
+      required: true
+      
+  - type: textarea
+    id: code
+    attributes:
+      label: Code Sample
+      description: Minimal code sample that reproduces the issue
+      render: typescript
+      placeholder: |
+        import { YoinkSDK } from "yoink-sdk";
+        // Your code here
+    validations:
+      required: false
+      
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs
+      description: Any relevant error messages or stack traces
+      render: shell
+      placeholder: Paste error logs here
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Where are you running the SDK?
+      options:
+        - Node.js
+        - Browser
+        - React Native
+        - Other
+    validations:
+      required: true
+      
+  - type: input
+    id: sdk-version
+    attributes:
+      label: SDK Version
+      description: Which version of yoink-sdk are you using?
+      placeholder: "1.0.0"
+    validations:
+      required: true
+      
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js Version
+      description: Output of `node --version`
+      placeholder: "v20.14.0"
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: network
+    attributes:
+      label: Network
+      description: Which network are you using?
+      options:
+        - Eclipse Testnet
+        - Eclipse Mainnet
+        - Solana Devnet
+        - Solana Mainnet
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context about the problem
+      placeholder: Add any other context about the problem here
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have tested with the latest version of the SDK
+          required: true
+        - label: I have provided a minimal code sample that reproduces the issue
+          required: false

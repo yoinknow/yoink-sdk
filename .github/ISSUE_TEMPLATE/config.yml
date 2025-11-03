@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📖 Documentation
+    url: https://github.com/memewhales/YoinkIt_SmartContract/tree/master/yoink-sdk#readme
+    about: Check the documentation and API reference
+  - name: 💬 Discussions
+    url: https://github.com/memewhales/YoinkIt_SmartContract/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 🔒 Security Issues
+    url: https://github.com/memewhales/YoinkIt_SmartContract/security/advisories/new
+    about: Report security vulnerabilities privately
