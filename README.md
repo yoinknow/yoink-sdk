@@ -9,6 +9,17 @@
   [![Solana](https://img.shields.io/badge/Solana-Solana-purple?style=flat-square)](https://solana.com/)
 
   ### 🚀 Official TypeScript SDK for interacting with the Yoink bonding curve protocol on Solana
+
+  ---
+
+  ## 🌐 Official Links
+
+  **🏠 Website**: [https://yoink.now](https://yoink.now)  
+  **🐦 Twitter**: [@YoinkNow](https://x.com/YoinkNow)  
+  **📚 GitHub**: [yoinknow/yoink-sdk](https://github.com/yoinknow/yoink-sdk)  
+  **📦 NPM**: [yoink-sdk](https://www.npmjs.com/package/yoink-sdk)
+
+  ---
   
 </div>
 
@@ -594,7 +605,9 @@ By using this software, you acknowledge that you have read, understood, and agre
 
 ## Support
 
-For issues, questions, or contributions, please visit our [GitHub repository](https://github.com/memewhales/yoink-sdk).
+For issues, questions, or contributions, please visit our [GitHub repository](https://github.com/yoinknow/yoink-sdk).
+
+For more information about Yoink protocol, visit our [website](https://yoink.now) or follow us on [Twitter](https://x.com/YoinkNow).
 
 ---
 
