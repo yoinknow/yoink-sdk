@@ -20,10 +20,8 @@ rollup.config.js
 .gitignore
 .gitattributes
 
-# Test files
-test-sdk.js
-test-sdk-transactions.js
-test-sdk.ts
+# Test files and internal development
+internalsdk/
 *.test.ts
 *.test.js
 *.spec.ts
