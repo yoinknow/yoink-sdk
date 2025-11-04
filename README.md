@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/yoinknow.png" alt="Yoink Logo" width="200"/>
+  <img src="https://yoink.now/yoinknow.png" alt="Yoink Logo" width="200"/>
   
   # Yoink SDK
 
