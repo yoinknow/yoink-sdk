@@ -25,12 +25,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/memewhales/YoinkIt_SmartContract.git",
-    "directory": "yoink-sdk"
+    "url": "git+https://github.com/yoinknow/yoink-sdk.git"
   },
-  "homepage": "https://github.com/memewhales/YoinkIt_SmartContract/tree/master/yoink-sdk#readme",
+  "homepage": "https://yoink.now",
   "bugs": {
-    "url": "https://github.com/memewhales/YoinkIt_SmartContract/issues"
+    "url": "https://github.com/yoinknow/yoink-sdk/issues"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://yoink.now"
+  },
+  "social": {
+    "twitter": "https://x.com/YoinkNow",
+    "website": "https://yoink.now"
   },
   "keywords": [
     "yoink",
@@ -46,7 +53,11 @@
     "spl-token",
     "anchor"
   ],
-  "author": "Yoink Team",
+  "author": {
+    "name": "Yoink Team",
+    "url": "https://yoink.now",
+    "twitter": "https://x.com/YoinkNow"
+  },
   "license": "ISC",
   "devDependencies": {
     "@coral-xyz/borsh": "^0.30.1",
