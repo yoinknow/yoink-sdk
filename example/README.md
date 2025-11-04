@@ -1,4 +1,3 @@
-````markdown
 # Yoink SDK Examples
 
 This directory contains working examples demonstrating how to use the Yoink SDK.
@@ -348,6 +347,7 @@ Executing buy transaction...
 ## 💡 Tips
 
 1. **Always test on testnet first** before using mainnet
+2. **Start with small amounts** when testing
 2. **Start with small amounts** when testing
 3. **Use appropriate slippage** - too low may cause failures, too high reduces protection
 4. **Check quotes before trading** to understand price impact
