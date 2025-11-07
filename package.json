@@ -1,6 +1,6 @@
 {
   "name": "yoink-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "TypeScript SDK for Yoink bonding curve protocol on Solana - Buy, sell and query tokens with built-in slippage protection",
   "module": "./dist/esm/index.js",
   "main": "./dist/cjs/index.js",
