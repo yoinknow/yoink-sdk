@@ -32,7 +32,7 @@ import {
 } from "./util";
 import { Yoink, IDL } from "./IDL/yoink";
 
-const PROGRAM_ID = "HbiDw6U515iWwHQ4edjmceT24ST7akg7z5rhXRhBac4J";
+const PROGRAM_ID = "9BSxAV9iRuiT3W7kwhFEkmzfoMo7xZTBdFGRF793JRbC";
 
 export const GLOBAL_ACCOUNT_SEED = "global";
 export const BONDING_CURVE_SEED = "bonding-curve";

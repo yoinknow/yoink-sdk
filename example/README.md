@@ -147,7 +147,7 @@ node simple-trading-bot.js
    # RPC_URL=https://api.mainnet-beta.solana.com
    ```
    PRIVATE_KEY=[your,private,key,array]
-   PROGRAM_ID=HbiDw6U515iWwHQ4edjmceT24ST7akg7z5rhXRhBac4J
+   PROGRAM_ID=9BSxAV9iRuiT3W7kwhFEkmzfoMo7xZTBdFGRF793JRbC
    ```
 
 5. Update the example code with a valid token mint address:

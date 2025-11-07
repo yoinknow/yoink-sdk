@@ -585,7 +585,7 @@ npx ts-node index.ts
 
 ## Program Information
 
-- **Program ID:** `HbiDw6U515iWwHQ4edjmceT24ST7akg7z5rhXRhBac4J`
+- **Program ID:** `9BSxAV9iRuiT3W7kwhFEkmzfoMo7xZTBdFGRF793JRbC`
 - **Network:** Solana
 - **Framework:** Anchor ^0.30.1
 

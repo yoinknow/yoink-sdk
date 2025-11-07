@@ -250,7 +250,7 @@ async function getTokenBalance(mint: PublicKey, owner: PublicKey) {
 
 ## Resources
 
-- **Program ID:** `HbiDw6U515iWwHQ4edjmceT24ST7akg7z5rhXRhBac4J`
+- **Program ID:** `9BSxAV9iRuiT3W7kwhFEkmzfoMo7xZTBdFGRF793JRbC`
 - **Default RPC:** `https://staging-rpc.dev2.eclipsenetwork.xyz` (testnet)
 - **Solana Mainnet RPC:** `https://api.mainnet-beta.solana.com`
 - **Full Docs:** See README.md
